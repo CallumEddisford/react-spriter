@@ -2,6 +2,7 @@ import React from "react";
 import ReactSpriter from "../../";
 import sprite from "./twitter_sprite.png";
 import "./styles.css";
+import "../global.css";
 
 function Basic() {
   return (

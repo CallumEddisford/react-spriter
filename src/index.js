@@ -3,7 +3,9 @@ import styled, { css, keyframes } from "styled-components";
 
 const spriteAnimation = (props) => keyframes`
   to {
-    background-position: -${props.positionOffset || 0}px -${props.layer ? props.layer * props.frameHeight : 0}px;
+    background-position:
+      ${props.isInfinite ? `-${props.positionOffset || 0}px` : `-${props.positionOffset - props.frameWidth || 0}px`}
+      -${props.layer ? props.layer * props.frameHeight : 0}px;
   }
 `;
 
@@ -16,31 +18,26 @@ const Sprite = styled.div`
   ${(props) =>
     props.shouldAnimate &&
     css`
-      animation: ${spriteAnimation(props)} ${props.duration || 1000}ms
-        steps(${props.frames || 0}) ${props.isInfinite ? "infinite" : "forwards"};
+      animation:
+        ${spriteAnimation(props)} ${props.duration || 1000}ms
+        steps(${props.isInfinite ? props.frames || 0 : (props.frames || 0) - 1})
+        ${props.isInfinite ? "infinite" : "forwards"};
     `};
 `;
 
 class ReactSpriter extends Component {
   constructor(props) {
     super(props);
-    this.positionOffset = this.props.spriteWidth - this.props.frameWidth;
     this.frames = Math.floor(this.props.spriteWidth / this.props.frameWidth);
-    this.shouldAnimate = this.props.shouldAnimate === undefined ? true : this.props.shouldAnimate;
   }
 
   render() {
     return (
       <Sprite
-        sprite={this.props.sprite}
-        frameWidth={this.props.frameWidth}
-        frameHeight={this.props.frameHeight}
+        { ...this.props }
         positionOffset={this.props.spriteWidth}
-        frames={this.frames}
-        duration={this.props.duration}
-        isInfinite={this.props.isInfinite}
         shouldAnimate={this.props.shouldAnimate}
-        layer={this.props.layer}
+        frames={this.frames}
       />
     );
   }

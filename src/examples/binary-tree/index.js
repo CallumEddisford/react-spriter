@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import ReactSpriter from "../../";
 import sprite from "./character.jpg";
 import "./styles.css";
+import "../global.css";
 
 function BinaryTree() {
   const FACE_DOWN = 0;
