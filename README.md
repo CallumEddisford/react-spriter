@@ -1,3 +1,5 @@
+# This package is a work in progress!
+
 [![npm version](https://badge.fury.io/js/react-spriter.svg)](https://badge.fury.io/js/react-spriter)
 ![workflow](https://github.com/CallumEddisford/react-spriter/actions/workflows/npm-publish.yml/badge.svg)
 ![cypress](https://github.com/CallumEddisford/react-spriter/actions/workflows/test.yml/badge.svg)
