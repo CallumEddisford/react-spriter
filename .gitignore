@@ -1,0 +1,6 @@
+dist
+lib/styles/carousel.min.css
+node_modules
+coverage
+storybook-static
+.DS_STORE

@@ -1,0 +1,40 @@
+[![npm version](https://badge.fury.io/js/react-spriter.svg)](https://badge.fury.io/js/react-spriter)
+![workflow](https://github.com/CallumEddisford/react-spriter/actions/workflows/npm-publish.yml/badge.svg)
+![cypress](https://github.com/CallumEddisford/react-spriter/actions/workflows/test.yml/badge.svg)
+
+# React Spriter
+A simple library to animate sprite sheets
+
+DEMOS: [https://react-spriter.callumeddisford.co.uk/](https://react-spriter.callumeddisford.co.uk/)
+
+# Features
+
+
+# Installation
+You can install `react-spriter` using npm or yarn:
+
+```shell
+npm install react-spriter
+```
+
+or
+
+```shell
+yarn add react-spriter
+```
+
+# Usage
+
+
+# Props
+
+# Examples
+Please check out the `src/examples` directory, where there are serveral examples of how to achieve common carousel requirements.
+
+# Local development
+To start storybook locally:
+
+```shell
+  npm install
+  npm run storybook
+```
