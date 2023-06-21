@@ -1,7 +1,7 @@
 {
   "name": "react-spriter",
   "version": "0.0.1",
-  "description": "Introducing React Spriter, a simple to use sprite animation tool",
+  "description": "ReactSpriter is a React component that allows you to create animated sprites by providing a convenient interface",
   "main": "dist/index.min.js",
   "files": [
     "dist/index.min.js"
