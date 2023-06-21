@@ -15,6 +15,7 @@ function Basic() {
         isInfinite
         shouldAnimate
       />
+      <p>Sprite: <a href="https://cliply.co/clip/twitter-icon/">https://cliply.co/clip/twitter-icon/</a></p>
     </div>
   );
 }
