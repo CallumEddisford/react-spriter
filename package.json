@@ -26,12 +26,8 @@
   "homepage": "https://callumeddisford.github.io/react-spriter",
   "keywords": [
     "react",
-    "carousel",
-    "gallery",
-    "slider",
-    "slideshow",
-    "presentation",
-    "customizable",
+    "animation",
+    "sprite",
     "lightweight",
     "browser-support"
   ],
