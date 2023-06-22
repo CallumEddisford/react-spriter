@@ -1,6 +1,6 @@
 {
   "name": "react-spriter",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "ReactSpriter is a React component that allows you to create animated sprites by providing a convenient interface",
   "main": "dist/index.min.js",
   "files": [
@@ -34,8 +34,8 @@
   "author": "Callum Eddisford",
   "license": "ISC",
   "peerDependencies": {
-    "react": "^16.2.0",
-    "react-dom": "^16.2.0"
+    "react": "15 - 18",
+    "react-dom": "15 - 18"
   },
   "devDependencies": {
     "@babel/cli": "^7.21.5",
