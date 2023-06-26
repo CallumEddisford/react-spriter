@@ -8,6 +8,7 @@ function TryYourself({
   spriteWidth,
   frameWidth,
   frameHeight,
+  elementWidth,
   duration,
   isInfinite,
   shouldAnimate,
@@ -20,6 +21,7 @@ function TryYourself({
         spriteWidth={spriteWidth}
         frameWidth={frameWidth}
         frameHeight={frameHeight}
+        elementWidth={elementWidth}
         duration={duration}
         isInfinite={isInfinite}
         shouldAnimate={shouldAnimate}

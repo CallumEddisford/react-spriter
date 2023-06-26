@@ -5,9 +5,11 @@
 ![cypress](https://github.com/CallumEddisford/react-spriter/actions/workflows/test.yml/badge.svg)
 
 # React Spriter
-ReactSpriter is a React component that allows you to create animated sprites using styled-components. It simplifies the process of animating sprites by providing a convenient interface to define sprite properties and animations.
+React Spriter is a React component that allows you to create animated sprites using styled-components. It simplifies the process of animating sprites by providing a convenient interface to define sprite properties and animations.
 
 DEMOS: [https://react-spriter.callumeddisford.co.uk/](https://react-spriter.callumeddisford.co.uk/)
+
+Build a game! Tell a story! Animate your icons!
 
 # Features
 - Pause and play sprite
@@ -38,9 +40,10 @@ class MyComponent extends React.Component {
     return (
       <ReactSpriter
         sprite={sprite}
+        spriteWidth={spriteWidth}
         frameWidth={frameWidth}
         frameHeight={frameHeight}
-        spriteWidth={spriteWidth}
+        elementWidth={elementWidth}
         duration={animationDuration}
         isInfinite={isInfinite}
         shouldAnimate={shouldAnimate}
@@ -57,6 +60,7 @@ class MyComponent extends React.Component {
 | sprite            | string  | The URL of the sprite image.                                                                                                                      |
 | frameWidth        | number  | The width of each frame in the sprite.                                                                                                            |
 | frameHeight       | number  | The height of each frame in the sprite.                                                                                                           |
+| elementWidth      | number  | (optional) Use this option to resize the sprite to a given pixel width, the element height is calculated automatically to mantain apsect ratio.   |
 | spriteWidth       | number  | The total width of the sprite image.                                                                                                              |
 | animationDuration | number  | The duration of the animation in milliseconds.                                                                                                    |
 | isInfinite        | boolean | Whether the animation should loop infinitely.                                                                                                     |
@@ -72,9 +76,10 @@ import ReactSpriter from "react-spriter";
 import sprite from "path/to/sprite.png";
 
 const MyComponent = () => {
+  const spriteWidth = 512;
   const frameWidth = 64;
   const frameHeight = 64;
-  const spriteWidth = 512;
+  const elementWidth= 50;
   const animationDuration = 1000;
   const isInfinite = true;
   const shouldAnimate = true;
@@ -83,9 +88,10 @@ const MyComponent = () => {
   return (
     <ReactSpriter
       sprite={sprite}
+      spriteWidth={spriteWidth}
       frameWidth={frameWidth}
       frameHeight={frameHeight}
-      spriteWidth={spriteWidth}
+      elementWidth={elementWidth}
       duration={animationDuration}
       isInfinite={isInfinite}
       shouldAnimate={shouldAnimate}

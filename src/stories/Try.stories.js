@@ -15,6 +15,7 @@ export const TryItOut = {
     spriteWidth: 735,
     frameWidth: 183.75,
     frameHeight: 275.25,
+    elementWidth: 150,
     duration: 500,
     isInfinite: true,
     shouldAnimate: true,

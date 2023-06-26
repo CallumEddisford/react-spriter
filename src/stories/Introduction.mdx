@@ -41,9 +41,10 @@ class MyComponent extends React.Component {
     return (
       <ReactSpriter
         sprite={sprite}
+        spriteWidth={spriteWidth}
         frameWidth={frameWidth}
         frameHeight={frameHeight}
-        spriteWidth={spriteWidth}
+        elementWidth={elementWidth}
         duration={animationDuration}
         isInfinite={isInfinite}
         shouldAnimate={shouldAnimate}
@@ -67,6 +68,11 @@ class MyComponent extends React.Component {
         <td>The URL of the sprite image.</td>
     </tr>
     <tr>
+        <td>spriteWidth</td>
+        <td>number</td>
+        <td>The total width of the sprite image.</td>
+    </tr>
+    <tr>
         <td>frameWidth</td>
         <td>number</td>
         <td>The width of each frame in the sprite.</td>
@@ -77,9 +83,9 @@ class MyComponent extends React.Component {
         <td>The height of each frame in the sprite.</td>
     </tr>
     <tr>
-        <td>spriteWidth</td>
+        <td>elementWidth</td>
         <td>number</td>
-        <td>The total width of the sprite image.</td>
+        <td>(optional) Use this option to resize the sprite to a given pixel width, the element height is calculated automatically to mantain apsect ratio.</td>
     </tr>
     <tr>
         <td>animationDuration</td>
@@ -112,9 +118,10 @@ import ReactSpriter from "react-spriter";
 import sprite from "path/to/sprite.png";
 
 const MyComponent = () => {
+  const spriteWidth = 512;
   const frameWidth = 64;
   const frameHeight = 64;
-  const spriteWidth = 512;
+  const elementWidth = 50;
   const animationDuration = 1000;
   const isInfinite = true;
   const shouldAnimate = true;
@@ -123,9 +130,10 @@ const MyComponent = () => {
   return (
     <ReactSpriter
       sprite={sprite}
+      spriteWidth={spriteWidth}
       frameWidth={frameWidth}
       frameHeight={frameHeight}
-      spriteWidth={spriteWidth}
+      elementWidth={elementWidth}
       duration={animationDuration}
       isInfinite={isInfinite}
       shouldAnimate={shouldAnimate}
